@@ -2,7 +2,7 @@ import { Download, Menu } from "lucide-react";
 import { Button } from "./button";
 import CustomMenu from "./CustomMenu";
 
-const buttons: string[] = ["Home", "Projects", "Resume"];
+const buttons: string[] = ["Home", "Projects", "Resume", "Contact Me"];
 
 export default function Navbar() {
   return (
