@@ -1,7 +1,10 @@
+import "@/app/globals.css";
 import { Inter as FontSans } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/ui/Navbar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,7 +31,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {children}
+        <Navbar />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
